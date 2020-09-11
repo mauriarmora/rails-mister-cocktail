@@ -1,0 +1,23 @@
+.home-navbar {
+  position: sticky;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  a {
+    color: white;
+    font-size: 18px;
+    margin: 12px;
+    &:hover {
+      color: rgba(210, 210, 210, 0.5);
+      text-decoration: none;
+    }
+  }
+  img {
+    width: 50px;
+    margin-right: 5px;
+  }
+}

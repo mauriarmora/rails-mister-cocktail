@@ -1,0 +1,30 @@
+* {
+  text-decoration: none;
+}
+
+.home-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://c.stocksy.com/a/bW4800/z9/1924021.jpg');
+  background-size: cover;
+  height: 720px;
+  display: flex;
+  align-items: center;
+  margin-top: -60px;
+}
+
+.text-container {
+  color: white;
+  height: 100px;
+  margin-left: 45px;
+  h1 { font-size: 60px; }
+  p { font-weight: lighter; font-size: 24px; }
+  a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 2px;
+    margin-top: 21px;
+    display: inline-block;
+    &:hover {color: white; background-color: rgba(210, 210, 210, 0.5);}
+  }
+}

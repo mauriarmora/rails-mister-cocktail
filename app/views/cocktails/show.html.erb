@@ -1,0 +1,28 @@
+  <div class="cocktail-banner">
+    <img src= <%= "https://source.unsplash.com/1600x900/?#{@cocktail.name},cocktail" %>>
+    <p> <%= @cocktail.name %> </p>
+  </div>
+<div class="show-container">
+  <div class="show-navbar">
+    <p> <%= link_to '< Go back', cocktails_path %> </p>
+  </div>
+  <h2> <%= @cocktail.name %> </h2>
+  <p> <%= link_to 'Create new dose', new_cocktail_dose_path(@cocktail) %> </p>
+
+  <div class="grid-cocktail-container">
+    <div class="cocktail-info">
+      <% @cocktail.doses.each do |dose| %>
+        <% ingredient = Ingredient.find(dose.ingredient_id) %>
+        <p> <%= "#{dose.description} #{ingredient.name}" %> </p>
+      <% end %>
+    </div>
+
+    <div class="dose-form">
+      <%= simple_form_for([@cocktail, @new_dose]) do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <div class="submit-btn"> <%= f.submit %> </div>
+      <% end %>
+    </div>
+  </div>
+</div>

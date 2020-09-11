@@ -1,0 +1,35 @@
+.cocktail-banner {
+  img{
+    width: 100%;
+  }
+}
+
+.grid-cocktail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 21px;
+}
+
+.cocktail-info {
+  color: white;
+  padding: 15px;
+  background-color: rgba(20, 20, 20, 0.9);
+  border-radius: 5px;
+}
+
+.dose-form {
+  input {
+    border-radius: 5px;
+  }
+  select {
+    border-radius: 5px;
+  }
+}
+
+.submit-btn input {
+  background-color: rgba(20, 20, 20, 0.9);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+}

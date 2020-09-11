@@ -1,0 +1,9 @@
+<div class="navbar">
+  <p> <%= link_to '< Go back', cocktails_path %> </p>
+</div>
+<div class="container">
+  <%= simple_form_for(@new_cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit %>
+  <% end %>
+</div>
