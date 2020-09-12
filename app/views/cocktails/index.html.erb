@@ -1,7 +1,34 @@
-<div class="grid-container">
-  <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: <%= "https://source.unsplash.com/featured/?#{@cocktail.name},cocktail" %>">
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
+<div class="index-background">
+  <div class="navbar">
+    <div class="languages">
+      <p><%= link_to 'EN', 'pages#home' %> / </p>
+      <p><%= link_to 'ES', 'pages_es#home_es' %> / </p>
+      <p><%= link_to 'CAT', 'pages_cat#home_cat' %> </p>
     </div>
-  <% end %>
+    <div class="tabs">
+      <%= link_to 'Home', home_path %>
+      <%= link_to 'Cocktails', cocktails_path %>
+      <%= link_to 'About', about_path %>
+      <%= link_to 'Contact', contact_path %>
+    </div>
+    <%= link_to 'https://www.lewagon.com/', target: :_blank do %>
+      <%= image_tag 'lewagon-logo-black.png' %>
+    <% end %>
+  </div>
+
+  <a class="to-top" href="#top">
+    <div class="container title">
+      <h1>All your cocktails</h1>
+    </div>
+  </a>
+
+  <div class="flex-container container">
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail.name do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= "https://source.unsplash.com/featured/?#{cocktail.name.delete(' ').delete("'")},cocktail" %>)">
+            <p> <%= cocktail.name %> </p>
+          </div>
+          <% end %>
+      <% end %>
+  </div>
 </div>
