@@ -1,12 +1,21 @@
 <div class="home-navbar">
-  <div style="width: 50px;"></div>
+  <div class="languages">
+    <p><%= link_to 'EN', 'pages#home' %> / </p>
+    <p><%= link_to 'ES', 'pages_es#home_es' %> / </p>
+    <p><%= link_to 'CAT', 'pages_cat#home_cat' %> / </p>
+  </div>
+
   <div class="tabs">
     <%= link_to 'Cocktails', cocktails_path %>
     <%= link_to 'About', about_path %>
     <%= link_to 'Contact', contact_path %>
   </div>
-  <%= image_tag 'lewagon-logo-black.png' %>
+  <%= link_to 'https://www.lewagon.com/' do %>
+    <%= image_tag 'lewagon-logo-black.png' %>
+  <% end %>
+
 </div>
+
 
 <div class="home-banner">
   <div class="text-container">

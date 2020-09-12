@@ -1,6 +1,6 @@
 <div class="grid-container">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-category">
+    <div class="card-category" style="background-image: <%= "https://source.unsplash.com/featured/?#{@cocktail.name},cocktail" %>">
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
     </div>
   <% end %>
